@@ -1,7 +1,7 @@
 image: Ubuntu  # образ для сборки
 
 stack: jdk 11  # версия JDK
-- chmod +x gradlew
+
 branches:
   only:
     - main  # ветка git
@@ -11,7 +11,7 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - java -jar ./artifacts/app-mbank.jar &
-  
+  - chmod +x gradlew
 
 
 build_script:
